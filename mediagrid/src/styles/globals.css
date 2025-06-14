@@ -1,0 +1,68 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --mediagrid-purple: #7e22ce;
+  --mediagrid-dark-purple: #581c87;
+}
+
+body {
+  color: #222;
+}
+
+.dark body {
+  color: #fafafa;
+}
+
+/* Custom gradient button */
+.gradient-button {
+  background: linear-gradient(to right, var(--mediagrid-purple), var(--mediagrid-dark-purple));
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.gradient-button:hover {
+  box-shadow: 0 4px 12px rgba(126, 34, 206, 0.3);
+}
+
+/* Add fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #2d2d2d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c4c4c4;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
